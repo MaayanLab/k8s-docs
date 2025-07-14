@@ -28,3 +28,40 @@ To fix it, the docker container must be built for the x86 cluster architecture, 
 ```
 
 You will then have to build and push it again.
+
+## traefik conversion
+In some apps, we've used traefik as a way of setting up our production deployments, allowing us to specify the routes to our app in the docker-compose. The cluster itself runs traefik already and it's configured a little bit differently so your deployment may need to be modified.
+
+In general something that looks like this:
+```yaml
+services:
+  traefik:
+    image: traefik
+    # ...
+  webapp:
+    image: yourusername/webapp
+    # ...
+    labels:
+    - traefik.http.routers.webapp.rule=Host(`example.k8s.dev.maayanlab.cloud`)
+    - traefik.http.services.webapp.loadbalancer.server.port=8080
+```
+
+Will need to be updated with the following additions:
+```yaml
+services:
+  traefik:
+    image: traefik
+    # ...
+    # we don't really want/need to deploy another traefik on kubernetes
+    x-kubernetes:
+      exclude: true
+  webapp:
+    # ...
+    ports:
+    - target: 8080
+      # "published" is optional -- it's the port on your system if you use docker compose up
+      published: 8080
+      x-kubernetes:
+        annotations:
+          maayanlab.cloud/ingress: example.k8s.dev.maayanlab.cloud
+```
