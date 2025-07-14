@@ -6,4 +6,6 @@ This is for maintainers of the cluster backend -- if you are a regular user of t
 
 This section of the docs covers the server-side administration of the cluster.
 
-Coming Soon
+- [Install & configure](./10-install/index.md) kubernetes and ma'yanlab specific extensions
+- [Manage](./30-users.md) users which should have access to the cluster
+- [Backup & restore](./90-backup-and-restore.md) the cluster
