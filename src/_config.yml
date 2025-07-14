@@ -17,7 +17,7 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/maayanlab/dev
+  url: https://github.com/maayanlab/k8s-docs
   branch: main
 
 # Add GitHub buttons to your book
