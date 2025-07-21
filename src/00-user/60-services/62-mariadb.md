@@ -2,7 +2,7 @@
 
 [Mariadb](https://mariadb.org/) is a good and mature open source relational database and drop-in replacement for MySQL.
 
-See [tests/mariadb](https://github.com/MaayanLab/dokku/tree/kube-compose/tests/mariadb) for complete template.
+See [tests/mariadb](https://github.com/MaayanLab/k8s-docs/tree/main/tests/mariadb) for complete template.
 
 ## Adding mariadb to your app's docker-compose.yaml
 

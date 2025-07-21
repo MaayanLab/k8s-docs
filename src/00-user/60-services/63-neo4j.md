@@ -2,7 +2,7 @@
 
 [Neo4J](https://neo4j.com/) is an open source and enterprise graph database.
 
-See [tests/neo4j](https://github.com/MaayanLab/dokku/tree/kube-compose/tests/neo4j) for complete template.
+See [tests/neo4j](https://github.com/MaayanLab/k8s-docs/tree/main/tests/neo4j) for complete template.
 
 ## Adding neo4j to your app's docker-compose.yaml
 

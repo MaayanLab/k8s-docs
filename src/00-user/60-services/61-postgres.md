@@ -2,7 +2,7 @@
 
 [Postgres](https://www.postgresql.org/) is a good and mature open source relational database.
 
-See [tests/postgres](https://github.com/MaayanLab/dokku/tree/kube-compose/tests/postgres) for complete template.
+See [tests/postgres](https://github.com/MaayanLab/k8s-docs/tree/main/tests/postgres) for complete template.
 
 ## Adding postgres to your app's docker-compose.yaml
 

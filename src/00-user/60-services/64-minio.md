@@ -2,7 +2,7 @@
 
 [MinIO](https://min.io/) offers open source S3 compatible object storage, thier solution is very advanced and can scale the way AWS native S3 can across many nodes, alternatively it works just as well on a single system with the added benefit of coming with a easy-to-use user interface that can also be used to manage access controls.
 
-See [tests/minio](https://github.com/MaayanLab/dokku/tree/kube-compose/tests/minio) for complete template.
+See [tests/minio](https://github.com/MaayanLab/k8s-docs/tree/main/tests/minio) for complete template.
 
 ## Adding minio to your app's docker-compose.yaml
 
