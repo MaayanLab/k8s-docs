@@ -32,12 +32,12 @@ volumes:
 
 ```bash
 # stream dump output directly to pg_restore on db runnning in cluster
-docker compose exec -t yourapp-postgres pg_dump -Fc --no-acl --no-owner -h localhost -U postgres -w postgres \
-  | sshkube run kube-compose exec -i yourapp-postgres pg_restore -Fc -h localhost -U postgres -w postgres -
+docker compose exec -t yourapp-postgres pg_dump -Fc --no-acl --no-owner -U postgres -d postgres \
+  | sshkube run kube-compose exec -i yourapp-postgres pg_restore -Fc -U postgres -d postgres
 
 # you can of course go the other way around as well if you needed to get information from production
-sshkube run kube-compose exec -t yourapp-postgres pg_dump -Fc --no-acl --no-owner -h localhost -U postgres -w postgres \
-  | docker compose exec -i yourapp-postgres pg_restore -Fc -h localhost -U postgres -w postgres -
+sshkube run kube-compose exec -t yourapp-postgres pg_dump -Fc --no-acl --no-owner -U postgres -d postgres \
+  | docker compose exec -i yourapp-postgres pg_restore -Fc -U postgres -d postgres
 ```
 
 ## Accessing the database in your app

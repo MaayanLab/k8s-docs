@@ -1,7 +1,7 @@
 services:
   k8s-docs-app:
     build: .
-    image: maayanlab/k8s-docs:0.3.3
+    image: maayanlab/k8s-docs:0.3.4
     pull_policy: missing
     restart: unless-stopped
     ports:
@@ -10,6 +10,5 @@ services:
       imagePullPolicy: IfNotPresent
       annotations:
         maayanlab.cloud/ingress: https://docs.k8s.dev.maayanlab.cloud
-
 x-kubernetes:
   name: k8s-docs
