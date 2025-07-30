@@ -8,10 +8,12 @@ services:
   yourapp-minio:
     image: quay.io/minio/minio
     command: server /data --console-address ":9001"
+    pull_policy: missing
+    restart: unless-stopped
     environment:
     - MINIO_ROOT_USER=minio
     # this should be in your .env file and set to a long random string
-    - MINIO_ROOT_PASSWORD=U3glrQa8W6XwG6m
+    - MINIO_ROOT_PASSWORD
     ports:
     - target: 9000
       published: 9000
