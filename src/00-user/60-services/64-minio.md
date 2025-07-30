@@ -39,6 +39,18 @@ volumes:
       class: local-path
 ```
 
+## Transfering your local database to the production database
+```bash
+# copy file from docker minio onto your system
+docker compose cp yourapp-minio:/data data
+# copy file from your system up to the cloud (the -T option is necessary for this particular image)
+kube-compose cp -T data yourapp-minio:/data
+
+# copy file from cluster minio onto your system
+kube-compose cp -T yourapp-minio:/data data
+# copy file from your system up to the cloud (the -T option is necessary for this particular image)
+docker compose cp data yourapp-minio:/data
+```
 
 ## Accessing the database in your app
 
