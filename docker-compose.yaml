@@ -1,6 +1,7 @@
 services:
   k8s-docs-app:
     build: .
+    platform: linux/amd64
     image: maayanlab/k8s-docs:0.3.4
     pull_policy: missing
     restart: unless-stopped
