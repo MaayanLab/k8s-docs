@@ -24,8 +24,8 @@ if not s3.bucket_exists(bucket):
   s3.set_bucket_policy(bucket, json.dumps({
     'Version': '2012-10-17',
     'Statement': [
-      {'Effect': 'Allow', 'Principial': {'AWS': '*'}, 'Action': 's3:GetBucketLocation', 'Resource': f"arn:aws:s3:::{bucket}"},
-      {'Effect': 'Allow', 'Principial': {'AWS': '*'}, 'Action': 's3:GetObject', 'Resource': f"arn:aws:s3:::{bucket}/*"},
+      {'Effect': 'Allow', 'Principal': {'AWS': '*'}, 'Action': 's3:GetBucketLocation', 'Resource': f"arn:aws:s3:::{bucket}"},
+      {'Effect': 'Allow', 'Principal': {'AWS': '*'}, 'Action': 's3:GetObject', 'Resource': f"arn:aws:s3:::{bucket}/*"},
     ],
   }))
   # create a file

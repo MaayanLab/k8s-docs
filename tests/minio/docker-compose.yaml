@@ -1,5 +1,7 @@
 services:
   yourapp-app:
+    build: .
+    image: app
     environment:
     # so your app container goes to the right location, **NOT localhost**
     - S3_URL=http://minio:${MINIO_ROOT_PASSWORD}$@yourapp-minio:9000/yourbucket
