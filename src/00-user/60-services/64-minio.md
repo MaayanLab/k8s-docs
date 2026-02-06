@@ -110,3 +110,19 @@ The database will be accessible at the hostname corresponding to your service na
 
   # ... use s3 in your app deal with files ...
   ```
+
+## Configuring public file access to minio manually
+
+This isn't required if you used the minio client to configure the bucket as mentioned above where the policy is set from python. But you can also configure buckets using the minio CLI.
+
+```bash
+# run the minio client on **your** computer
+docker run -it --entrypoint=/bin/sh minio/mc
+
+# configure access to administrate your minio instance
+mc alias set minio https://s3.yourapp.k8s.dev.maayanlab.cloud
+# enter your access key / secret
+
+# configure anonymous download access to your bucket
+mc anonymous set download minio/your_bucket
+```
