@@ -5,4 +5,5 @@ Applications should typically be stateless, but naturally applications will inev
 - [PostgreSQL (RDMS)](./61-postgres.md): a popular relational database we recommend
 - [MariaDB (RDMS)](./62-mariadb.md): another popular relational database compatible with mysql
 - [Neo4J (GraphDB)](./63-neo4j.md): a graph database we use frequently in the lab
-- [MinIO (S3)](./64-minio.md): a cloud file storage service
+- [RustFS (S3)](./64-rustfs.md): a cloud file storage service
+- [MinIO (S3)](./64-minio.md) (deprecated): a cloud file storage service

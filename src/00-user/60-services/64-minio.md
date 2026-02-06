@@ -1,4 +1,6 @@
-# MinIO (S3)
+# MinIO (S3) (deprecated)
+
+**Deprecated**: Please consider [RustFS](./64-rustfs.md) for new deployments requiring S3.
 
 [MinIO](https://min.io/) offers open source S3 compatible object storage, thier solution is very advanced and can scale the way AWS native S3 can across many nodes, alternatively it works just as well on a single system with the added benefit of coming with a easy-to-use user interface that can also be used to manage access controls.
 
