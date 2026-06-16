@@ -25,12 +25,12 @@ services:
       published: 9000
       x-kubernetes:
         annotations:
-          maayanlab.cloud/ingress: https://s3.yourapp.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: https://s3.yourapp.k8s.maayanlab.cloud
     - target: 9001
       published: 9001
       x-kubernetes:
         annotations:
-          maayanlab.cloud/ingress: https://console.s3.yourapp.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: https://console.s3.yourapp.k8s.maayanlab.cloud
     volumes:
     - yourapp-minio-data:/data
 
@@ -71,7 +71,7 @@ The database will be accessible at the hostname corresponding to your service na
       environment:
       # so your app container goes to the right location, **NOT localhost**
       - S3_URL=http://minio:${MINIO_ROOT_PASSWORD}$@yourapp-minio:9000/yourbucket
-      - PUBLIC_S3_URL=https://s3.yourapp.k8s.dev.maayanlab.cloud
+      - PUBLIC_S3_URL=https://s3.yourapp.k8s.maayanlab.cloud
   ```
 - `app.py`:
   ```python
@@ -122,7 +122,7 @@ This isn't required if you used the minio client to configure the bucket as ment
 docker run -it --entrypoint=/bin/sh minio/mc
 
 # configure access to administrate your minio instance
-mc alias set minio https://s3.yourapp.k8s.dev.maayanlab.cloud
+mc alias set minio https://s3.yourapp.k8s.maayanlab.cloud
 # enter your access key / secret
 
 # configure anonymous download access to your bucket

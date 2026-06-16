@@ -18,18 +18,18 @@ services:
     # this should be in your .env file and set to a long random string
     - RUSTFS_SECRET_KEY
     - RUSTFS_CONSOLE_ENABLE=true
-    - RUSTFS_SERVER_DOMAINS=s3.yourapp.k8s.dev.maayanlab.cloud
+    - RUSTFS_SERVER_DOMAINS=s3.yourapp.k8s.maayanlab.cloud
     ports:
     - target: 9000
       published: 9000
       x-kubernetes:
         annotations:
-          maayanlab.cloud/ingress: https://s3.yourapp.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: https://s3.yourapp.k8s.maayanlab.cloud
     - target: 9001
       published: 9001
       x-kubernetes:
         annotations:
-          maayanlab.cloud/ingress: https://console.s3.yourapp.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: https://console.s3.yourapp.k8s.maayanlab.cloud
     volumes:
     - yourapp-rustfs-data:/data
 
@@ -70,7 +70,7 @@ The database will be accessible at the hostname corresponding to your service na
       environment:
       # so your app container goes to the right location, **NOT localhost**
       - S3_URL=http://rustfs:${RUSTFS_SECRET_KEY}$@yourapp-rustfs:9000/yourbucket
-      - PUBLIC_S3_URL=https://s3.yourapp.k8s.dev.maayanlab.cloud
+      - PUBLIC_S3_URL=https://s3.yourapp.k8s.maayanlab.cloud
   ```
 - `app.py`:
   ```python
@@ -115,7 +115,7 @@ The database will be accessible at the hostname corresponding to your service na
 ## Configuring public file access through the console
 
 Visit
-<https://console.s3.yourapp.k8s.dev.maayanlab.cloud> (replacing with your url)
+<https://console.s3.yourapp.k8s.maayanlab.cloud> (replacing with your url)
 
 Log in with your RUSTFS_ACCESS_KEY & RUSTFS_SECRET_KEY.
 

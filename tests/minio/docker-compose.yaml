@@ -5,7 +5,7 @@ services:
     environment:
     # so your app container goes to the right location, **NOT localhost**
     - S3_URL=http://minio:${MINIO_ROOT_PASSWORD}$@yourapp-minio:9000/yourbucket
-    - PUBLIC_S3_URL=https://s3.yourapp.k8s.dev.maayanlab.cloud
+    - PUBLIC_S3_URL=https://s3.yourapp.k8s.maayanlab.cloud
 
   yourapp-minio:
     image: quay.io/minio/minio
@@ -21,12 +21,12 @@ services:
       published: 9000
       x-kubernetes:
         annotations:
-          maayanlab.cloud/ingress: https://s3.minio.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: https://s3.minio.k8s.maayanlab.cloud
     - target: 9001
       published: 9001
       x-kubernetes:
         annotations:
-          maayanlab.cloud/ingress: https://console.s3.minio.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: https://console.s3.minio.k8s.maayanlab.cloud
     volumes:
     - yourapp-minio-data:/data
     x-kubernetes:

@@ -59,7 +59,7 @@ This is a mechanism I (Daniel J. B. Clarke) came up with that facilitates access
 
 ```bash
 git clone https://github.com/u8sand/sshkube.git
-DOMAIN=ssh.k8s.dev.maayanlab.cloud
+DOMAIN=ssh.k8s.maayanlab.cloud
 helm upgrade --create-namespace -n sshkube sshkube ./charts/sshkube/ -f - << EOF
 ingress:
   type: traefik

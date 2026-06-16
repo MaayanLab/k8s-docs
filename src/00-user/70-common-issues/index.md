@@ -42,7 +42,7 @@ services:
     image: yourusername/webapp
     # ...
     labels:
-    - traefik.http.routers.webapp.rule=Host(`example.k8s.dev.maayanlab.cloud`)
+    - traefik.http.routers.webapp.rule=Host(`example.k8s.maayanlab.cloud`)
     - traefik.http.services.webapp.loadbalancer.server.port=8080
 ```
 
@@ -63,5 +63,5 @@ services:
       published: 8080
       x-kubernetes:
         annotations:
-          maayanlab.cloud/ingress: example.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: example.k8s.maayanlab.cloud
 ```

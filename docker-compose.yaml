@@ -10,6 +10,6 @@ services:
     x-kubernetes:
       imagePullPolicy: IfNotPresent
       annotations:
-        maayanlab.cloud/ingress: https://docs.k8s.dev.maayanlab.cloud
+        maayanlab.cloud/ingress: https://docs.k8s.maayanlab.cloud
 x-kubernetes:
   name: k8s-docs

@@ -44,7 +44,7 @@ Make the following additions in your app directory:
       x-kubernetes:
         annotations:
           # this is where it will be deployed when it is published
-          maayanlab.cloud/ingress: https://yourapp.k8s.dev.maayanlab.cloud
+          maayanlab.cloud/ingress: https://yourapp.k8s.maayanlab.cloud
   x-kubernetes:
     name: yourapp
   ```
