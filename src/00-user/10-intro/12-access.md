@@ -34,10 +34,10 @@ The lab administrator can, using your github username, give you access to the cl
 Once your access has been confirmed by a system administrator, you should be able to successfully configure access to the cluster with the following command:
 
 ```bash
-sshkube install -s ssh.k8s.maayanlab.cloud -u your-github-username
+sshkube install -s ssh.k8s.maayanlab.cloud -u your-lowercase-github-username
 ```
 
-This will report `Success` if it worked, if not, let us know so we can figure out why.
+This will report `Success` if it worked, if not, let us know so we can figure out why. Note that even if your github username shows as uppercase, you'll use your username all lowercase here.
 
 ## Using sshkube
 sshkube adds some environment flags so that you can access the cluster. `sshkube run somecommand` will ensure that `somecommand` runs with the necessary environment flags. It's also possible to set up your current shell with `$(sshkube init)` after which you can use the commands directly.

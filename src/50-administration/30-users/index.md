@@ -3,7 +3,7 @@
 Users gain access to the cluster through [sshkube](https://github.com/u8sand/sshkube), installed via helm chart.
 
 ## Adding/Removing github users
-To manage users, their github username can simply be added/removed from the sshkube configmap (one user per line):
+To manage users, their github username (ALL LOWERCASE) can simply be added/removed from the sshkube configmap (one user per line):
 ```bash
 sshkube run kubectl -n sshkube edit configmap/sshkube-github-users
 ```
