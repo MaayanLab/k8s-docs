@@ -25,7 +25,7 @@ In a blank directory, create a file:
     code-data:
       x-kubernetes:
         size: 1Gi
-        class: local-path
+        class: ceph-block-no-replicas
 
   x-kubernetes:
     name: code

@@ -26,7 +26,7 @@ In a blank directory, create a file:
     jupyter-data:
       x-kubernetes:
         size: 1Gi
-        class: local-path
+        class: ceph-block-no-replicas
 
   x-kubernetes:
     name: jupyter

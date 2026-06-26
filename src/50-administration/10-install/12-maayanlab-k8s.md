@@ -66,7 +66,7 @@ ingress:
   domain: ${DOMAIN}
   certResolver: default
 storage:
-  class: local-path
+  class: ceph-block-no-replicas
 
 # all github users which should have access go here
 githubUsers: |

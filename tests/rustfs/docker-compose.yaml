@@ -35,7 +35,7 @@ volumes:
   yourapp-rustfs-data:
     x-kubernetes:
       size: 1Gi
-      class: local-path
+      class: ceph-block-no-replicas
 
 x-kubernetes:
   name: yourapp-rustfs

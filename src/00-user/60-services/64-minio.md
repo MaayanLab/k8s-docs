@@ -38,7 +38,7 @@ volumes:
   yourapp-minio-data:
     x-kubernetes:
       size: 1Gi
-      class: local-path
+      class: ceph-block-no-replicas
 ```
 
 ## Transfering your local database to the production database
