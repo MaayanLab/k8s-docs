@@ -266,6 +266,22 @@ cat > policy.json << EOF
 EOF
 AWS_ACCESS_KEY_ID=<TODO> AWS_SECRET_ACCESS_KEY=<TODO> aws --endpoint-url=https://s3.k8s.maayanlab.cloud s3api put-bucket-policy --bucket ${BUCKET} --policy file://policy.json
 
+# configure the bucket's CORS policy
+cat > cors.json << EOF
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": ["*"],
+      "AllowedMethods": ["GET", "PUT", "POST", "DELETE", "HEAD"],
+      "AllowedHeaders": ["*"],
+      "ExposeHeaders": ["ETag"],
+      "MaxAgeSeconds": 3000
+    }
+  ]
+}
+EOF
+AWS_ACCESS_KEY_ID=<TODO> AWS_SECRET_ACCESS_KEY=<TODO> aws --endpoint-url=https://s3.k8s.maayanlab.cloud s3api put-bucket-cors --bucket ${BUCKET} --cors-configuration file://cors.json
+
 ```
 
 
