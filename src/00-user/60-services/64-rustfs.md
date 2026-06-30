@@ -1,4 +1,6 @@
-# RustFS (S3)
+# RustFS (S3) (deprecated)
+
+**Deprecated**: Please use [Ceph](./64-ceph.md) for new deployments requiring S3.
 
 [RustFS](https://rustfs.com/) offers open source S3 compatible object storage, taking over the space that MinIO used to fill.
 

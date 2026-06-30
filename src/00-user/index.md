@@ -18,4 +18,5 @@ This section of the docs covers the user-side usage of the public ma'ayanlab clu
     3. [Neo4J (GraphDB)](./60-services/63-neo4j.md): a graph database we use frequently in the lab
     4. [RustFS (S3)](./60-services/64-rustfs.md): a cloud file storage service
     5. [MinIO (S3)](./60-services/64-minio.md) (deprecated): a cloud file storage service
-5. [Common questions](./70-common-issues/index.md) & issues you may experience, answered.
+5. [Persistent storage guidance](./70-storage/index.md)
+6. [Common questions](./80-common-issues/index.md) & issues you may experience, answered.
