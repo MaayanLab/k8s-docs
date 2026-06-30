@@ -37,11 +37,15 @@ project:
             - file: 00-user/60-services/61-postgres.md
             - file: 00-user/60-services/62-mariadb.md
             - file: 00-user/60-services/63-neo4j.md
+            - file: 00-user/60-services/64-ceph.md
             - file: 00-user/60-services/64-minio.md
             - file: 00-user/60-services/64-rustfs.md
+        - title: Storage
+          children:
+            - file: 00-user/70-storage/index.md
         - title: Common Issues
           children:
-            - file: 00-user/70-common-issues/index.md
+            - file: 00-user/80-common-issues/index.md
     - title: Administration
       children:
         - file: 50-administration/index.md
